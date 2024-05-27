@@ -12,7 +12,7 @@ import  Navbar  from './components/Navbar'
 
 import { SignIn } from './pages/SignIn'
 // import {SignOut} from './pages/SignOut'
-import { Home } from './pages/Home';
+import { Home } from './pages/Home/Home';
 import SignOut from './pages/SignOut'; // Ensure this is a default import
 
 
