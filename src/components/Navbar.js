@@ -1,7 +1,7 @@
-import {NavLink,Outlet} from  "react-router-dom"
+import {NavLink} from  "react-router-dom"
 
 
-export  const Navbar = () =>{
+ const Navbar = () =>{
     return (
         <div>
             <nav className = "navbar">
@@ -10,8 +10,10 @@ export  const Navbar = () =>{
                 <NavLink is activeclassName =".active" to ='/SignIn'> Sign In </NavLink>
                 <NavLink is activeclassName =".active" to ="/SignOut"> Sign out </NavLink>
             </nav>
-            <Outlet />
+            {/* <Outlet /> */}
         </div>
     )
 
 }
+
+export default Navbar

@@ -1,23 +1,35 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import "./styles.css";
 
 
 
 // components import 
-import { Navbar } from './components/Navbar'
+import  Navbar  from './components/Navbar'
 
 // pages import
 
 import { SignIn } from './pages/SignIn'
-import {SignOut} from './pages/SignOut'
+// import {SignOut} from './pages/SignOut'
 import { Home } from './pages/Home';
+import SignOut from './pages/SignOut'; // Ensure this is a default import
+
+
+function AppLayout() {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
+}
 
 function App() {
   const router =  createBrowserRouter([
     {
       path :"/",
-      element:<Navbar/>,
+      element:<AppLayout />,
       children:[
         { index: true, element: <Home />},
         {path: "/SignIn", element: <SignIn />},

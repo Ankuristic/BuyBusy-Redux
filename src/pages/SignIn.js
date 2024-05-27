@@ -1,10 +1,12 @@
-
+import React from 'react'
+// import Navbar from '../components/Navbar'
 
 export const SignIn = () => {
   return (
-    <div className="page">
-      <h1>SignIn</h1>
-      <SignIn />
-    </div>
+      <div>
+      <h1> Sign In </h1>
+      <input type ="email" placeholder='Enter Email' />
+      <input type ="text" placeholder='password'/>
+      </div>
   );
 };
