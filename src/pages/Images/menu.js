@@ -1,6 +1,6 @@
 
 export const menu = [
-    { id: '1', images: "./Images/Electronics/image 1.jpg" , description: "loreum" },
+    { id: '1', images: "./Electronics/image1" , description: "loreum" },
     { id: '2', images: "./Images/Electronics/image2", description: "loreum" },
     { id: '3', images: "./Images/Electronics/image3", description: "loreum" },
     { id: '4', images: "./Images/Electronics/image4", description: "loreum" },

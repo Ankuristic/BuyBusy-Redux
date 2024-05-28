@@ -3,35 +3,33 @@ import React from 'react'
 // import Navbar from '../components/Navbar'
 import './home.css'
 
+import image1 from "../Images/Electronics/image 1.jpg"
+import image2 from "../Images/Electronics/imge 2.jpg"
+import image3 from "../Images/Electronics/image 3.jpg"
+import image4 from "../Images/Electronics/image 4.jpg"
+import image5 from "../Images/jewelly/image 1.jpg"
+import image6 from "../Images/jewelly/image 2.jpg"
+import image7 from "../Images/jewelly/imaage 3.jpg"
+import image8 from "../Images/women/image 2.jpg"
+import image9 from "../Images/jewelly/image 4.jpg"
+import image11 from "../Images/men/image 1.jpg"
+
+
+
+
 
 const menu = [
-  { id: '1', images: "../Images/Electronics/image 1.jpg" , description: "loreum" },
-  { id: '2', images: "./Images/Electronics/image2", description: "loreum" },
-  { id: '3', images: "./Images/Electronics/image3", description: "loreum" },
-  { id: '4', images: "./Images/Electronics/image4", description: "loreum" },
-  { id: '5', images: "./Images/jewelly/image1", description: "loreum" },
-  { id: '6', images: "./Images/jewelly/image2", description: "loreum" },
-  { id: '7', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '8', images: "./Images/jewelly/image2", description: "loreum" },
-  { id: '9', images: "./Images/jewelly/image4", description: "loreum" },
-  { id: '10', images: "./Images/jewelly/image5", description: "loreum" },
-  { id: '11', images: "./Images/men's clothing/", description: "loreum" },
-  { id: '12', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '13', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '14', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '15', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '16', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '17', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '18', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '19', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '20', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '21', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '22', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '23', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '24', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '25', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '26', images: "./Images/Electronics/image1", description: "loreum" },
-  { id: '27', images: "./Images/Electronics/image1", description: "loreum" },
+  { id: '1', images: image1 , description: "loreum" },
+  { id: '2', images: image2, description: "loreum" },
+  { id: '3', images: image3, description: "loreum" },
+  { id: '4', images: image4, description: "loreum" },
+  { id: '5', images: image5, description: "loreum" },
+  { id: '6', images: image6, description: "loreum" },
+  { id: '7', images: image7, description: "loreum" },
+  { id: '8', images: image8, description: "loreum" },
+  { id: '9', images: image9, description: "loreum" },
+  { id: '11', images: image11, description: "loreum" },
+
 ];
 
 
@@ -41,9 +39,20 @@ const menu = [
     <div className='search-form'>
     <input type ="text"  placeholder="search by Name"/>
      </div>
-     <span className='filter'>
+     <div className='filter'>
       <h1> Filter </h1>
-     </span>
+      <h2> Category </h2>
+<input type="checkbox" id="clothing" />
+  <label for="vehicle1"> Men's clothing</label>
+  <input type="checkbox" id="" />
+  <label for="vehicle2"> women's clothing</label>
+  <input type="checkbox" />
+  <label for="vehicle3"> clothing</label>
+  <input type="checkbox" />
+  <label for="vehicle3"> eletronis</label>
+
+
+     </div>
      {/* <div className="menu-items">
                 {menu.map(item => (
                     <div key={item.id} className="menu-item">
