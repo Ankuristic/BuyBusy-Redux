@@ -2,11 +2,10 @@
 import React from 'react'
 // import Navbar from '../components/Navbar'
 import './home.css'
-import image1 from "../Images/Electronics/image1"
 
 
 const menu = [
-  { id: '1', images: image1, description: "loreum" },
+  { id: '1', images: "../Images/Electronics/image 1.jpg" , description: "loreum" },
   { id: '2', images: "./Images/Electronics/image2", description: "loreum" },
   { id: '3', images: "./Images/Electronics/image3", description: "loreum" },
   { id: '4', images: "./Images/Electronics/image4", description: "loreum" },
@@ -42,14 +41,27 @@ const menu = [
     <div className='search-form'>
     <input type ="text"  placeholder="search by Name"/>
      </div>
-     <div className="menu-items">
+     <span className='filter'>
+      <h1> Filter </h1>
+     </span>
+     {/* <div className="menu-items">
                 {menu.map(item => (
                     <div key={item.id} className="menu-item">
                         <img src={item.images} alt={item.description} />
                         <p>{item.description}</p>
                     </div>
                 ))}
-            </div>
+            </div> */}
+
+
+            <div className="menu-items">
+    {menu.map((item,index) => (
+        <div key={index} className="menu-item">
+            <img src={item.images} alt={item.description} />
+            {/* <p>{in}</p> */}
+        </div>
+    ))}
+</div>
 
 
     </div>
