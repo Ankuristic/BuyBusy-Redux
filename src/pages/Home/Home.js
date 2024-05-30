@@ -27,21 +27,42 @@ const menu = [
 
 export const Home = () => {
   const [clothings, setClothings] = useState([])
+  console.log(clothings);
 
-  const handleChange =(e)=>{
+  // const handleChange =(e)=>{
+  //   console.log("handle change working");
+  //   const value = e.target.value;
+  //   const checked = e.target.checked;
+  //   console.log(value,checked);
+  //   if(checked){
+  //     setClothings([
+
+  //       ...clothings, value
+
+  //     ])
+    
+  //   }
+  // }
+
+
+  const handleChange = (e) => {
     console.log("handle change working");
     const value = e.target.value;
     const checked = e.target.checked;
-    console.log(value,checked);
-    if(checked){
+    console.log(value, checked);
+    if (checked) {
       setClothings([
-
         ...clothings, value
-
-      ])
-    
+      ]);
+    } else {
+      setClothings(clothings.filter(item => item !== value));
     }
-  }
+  };
+
+  const filteredMenu = clothings.length > 0 
+    ? menu.filter(item => clothings.includes(item.category))
+    : menu;
+    console.log("filter",filteredMenu);
   return (
     <div className="home">
       <div className='search-form'>
@@ -68,8 +89,17 @@ export const Home = () => {
         </div>
       </div>
       
-      <div className="menu-items">
+      {/* <div className="menu-items">
         {menu.map((item) => (
+          <div key={item.id} className="menu-item">
+            <img src={item.images} alt={item.description} />
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div> */}
+
+      <div className="menu-items">
+        {filteredMenu.map((item) => (
           <div key={item.id} className="menu-item">
             <img src={item.images} alt={item.description} />
             <p>{item.description}</p>
